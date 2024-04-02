@@ -80,13 +80,12 @@ def parse_gps(data):
             if parts[5] == 'W':
                 longitude *= -1
             return str(latitude), str(longitude)
-    return "0", "0"  # This line must be aligned with the starting if of the block
+    return "0", "0"  
 
 gps_thread = threading.Thread(target=gps_thread_function)
 gps_thread.daemon = True  # Daemonize thread
 gps_thread.start()
 
-myMQTTClient = AWSIoTMQTTClient("uniqueID0120")
 # Configure the MQTT Client as previously
 # Assuming your credential files are in the same directory as your script.
 # Update the paths if your files are located elsewhere.
