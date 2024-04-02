@@ -90,12 +90,12 @@ myMQTTClient = AWSIoTMQTTClient("uniqueID0120")
 # Configure the MQTT Client as previously
 # Assuming your credential files are in the same directory as your script.
 # Update the paths if your files are located elsewhere.
-rootCAPath = "./AmazonRootCA1.pem"
-certificatePath = "./certificate.pem.crt"
-privateKeyPath = "./private.pem.key"
+rootCAPath = "AMAZONROOTCA PATH"
+certificatePath = "CERTIFICATE PATH"
+privateKeyPath = "PRIVATEKEY PATH"
 
-myMQTTClient = AWSIoTMQTTClient("uniqueID0120")
-myMQTTClient.configureEndpoint("a1tgxzzxrdvjk5-ats.iot.ap-south-1.amazonaws.com", 8883)
+myMQTTClient = AWSIoTMQTTClient("YOUR CLIENT ID")
+myMQTTClient.configureEndpoint("AWS IoT URL", 8883)
 myMQTTClient.configureCredentials(rootCAPath, privateKeyPath, certificatePath)
 
 # The rest of the configuration...
